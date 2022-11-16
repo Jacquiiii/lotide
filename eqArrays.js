@@ -7,20 +7,24 @@ const assertEqual = (actual, expected) => {
 // Function that compares two arrays and outputs true if matching and false if not
 const eqArrays = (arr1, arr2) => {
 
+  let outcome = false;
+
   for (let i in arr1) {
     if (arr1[i] !== arr2[i] || arr1.length !== arr2.length){
-      return false;
+      outcome = false;
+    } else {
+      outcome = true;
     }
   }
 
-  return true;
+  console.log(outcome);
 };
 
 
 // Test code
-console.log(eqArrays([6, 9], [1, 2, 3])); // => false
-console.log(eqArrays([1, 2, 3], [1, 2, 3])); // => true
-console.log(eqArrays(["1", "2", "3"], ["1", "2", "3"])); // => true
-console.log(eqArrays(["1", "2", "3"], ["1", "2", 3])); // => false
-console.log(assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true)); // => should PASS
+eqArrays([6, 9], [1, 2, 3]); // => false
+eqArrays([1, 2, 3], [1, 2, 3]); // => true
+eqArrays(["1", "2", "3"], ["1", "2", "3"]); // => true
+eqArrays(["1", "2", "3"], ["1", "2", 3]); // => false
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
 
