@@ -3,6 +3,7 @@ const assertEqual = (actual, expected) => {
   actual === expected ? console.log(`✅✅✅✅ Assertion Passed: ${actual} === ${expected}`) : console.log(`🛑🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
 };
 
+
 // function to calculate the smallest number in an array and return undefined if not an array or empty array
 const min = numbers => {
   let smallest = numbers[0];
@@ -37,6 +38,7 @@ console.log(min(groceryPrices));
 
 const coffeePrices = 5;
 console.log(min(coffeePrices));
+
 
 // Test code for assert equal
 // Test code for assert equal

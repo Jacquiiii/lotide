@@ -3,8 +3,8 @@ const assertEqual = (actual, expected) => {
   actual === expected ? console.log(`✅✅✅✅ Assertion Passed: ${actual} === ${expected}`) : console.log(`🛑🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
 };
 
-// Function that returns the first element in an array if there is at least one and returns undefined if not
 
+// Function that returns the first element in an array if there is at least one and returns undefined if not
 const head = (arr) => {
 
   if (arr.length >= 1) {
@@ -16,11 +16,13 @@ const head = (arr) => {
 
 };
 
+
 // Test code for head function
 console.log(head([5, 2, 1]));
 console.log(head([5]));
 console.log(head(2));
 console.log(head([]));
+
 
 // Test code for assert equal
 assertEqual(head([5,6,7]), 5);

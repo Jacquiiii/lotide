@@ -1,3 +1,4 @@
+// Function that compares two values and returns a passed or failure message if the values are equal or not
 const eqArrays = (arr1, arr2) => {
   for (let i in arr1) {
     if (arr1[i] !== arr2[i] || arr1.length !== arr2.length){
@@ -8,6 +9,7 @@ const eqArrays = (arr1, arr2) => {
 };
 
 
+// Similar function to the above but it outputs a full sentence
 const assertArraysEqual = (arr1, arr2) => {
   eqArrays(arr1,arr2) ? console.log(`✅✅✅✅ Assertion Passed: ${arr1} === ${arr2}`) : console.log(`🛑🛑🛑🛑 Assertion Failed: ${arr1} !== ${arr2}`);
 };
