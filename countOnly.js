@@ -3,7 +3,7 @@ const assertEqual = (actual, expected) => {
   actual === expected ? console.log(`✅✅✅✅ Assertion Passed: ${actual} === ${expected}`) : console.log(`🛑🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
 };
 
-
+// Function that should take in a collection of items and return counts for a specific subset of those items.
 const countOnly = function(allItems, itemsToCount) {
   let results = {};
 
