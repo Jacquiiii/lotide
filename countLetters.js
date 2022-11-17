@@ -30,7 +30,7 @@ let countLetters = input => {
     
   }
   // 'Return output' is to output a string of the object to use assert equal. Change this to 'return result' to output the object.
-  return output;
+  return result;
 };
 
 // Test code
