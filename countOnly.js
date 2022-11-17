@@ -1,9 +1,10 @@
-// Function that compares two values and returns a passed or failure message if the values are equal or not
+// Helper function
 const assertEqual = (actual, expected) => {
   actual === expected ? console.log(`✅✅✅✅ Assertion Passed: ${actual} === ${expected}`) : console.log(`🛑🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
 };
 
-// Function that should take in a collection of items and return counts for a specific subset of those items.
+
+// Project function: Function that should take in a collection of items and return counts for a specific subset of those items.
 const countOnly = function(allItems, itemsToCount) {
   let results = {};
 
@@ -16,12 +17,12 @@ const countOnly = function(allItems, itemsToCount) {
       }
     }
   }
-
   return results;
 };
 
-// allItems = first names; itemsToCount = result1
 
+// Test code
+// allItems = first names; itemsToCount = result1
 const firstNames = [
   "Karl",
   "Salima",
@@ -33,10 +34,9 @@ const firstNames = [
   "Fang",
   "Joe"
 ];
-
 const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
 
-assertEqual(result1["Jason"], 1);
-assertEqual(result1["Karima"], undefined);
-assertEqual(result1["Fang"], 2);
-assertEqual(result1["Agouhanna"], undefined);
+assertEqual(result1["Jason"], 1); // true
+assertEqual(result1["Karima"], undefined); // true
+assertEqual(result1["Fang"], 2); // true
+assertEqual(result1["Agouhanna"], undefined); // true

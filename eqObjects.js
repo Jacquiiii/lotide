@@ -4,8 +4,8 @@ const assertEqual = (actual, expected) => {
 };
 
 const eqArrays = (arr1, arr2) => {
-  for (let index in arr1) {
-    if (arr1[index] !== arr2[index] || arr1.length !== arr2.length) {
+  for (let i in arr1) {
+    if (arr1[i] !== arr2[i] || arr1.length !== arr2.length) {
       return false;
     }
   }
@@ -13,8 +13,7 @@ const eqArrays = (arr1, arr2) => {
 };
 
 
-
-// Function that compares two objects and returns true if they match or false if they don't
+// Project function: Function that compares two objects and returns true if they match or false if they don't (this function could use a refactor)
 const eqObjects = (object1, object2) => {
   let keys1 = Object.keys(object1);
   let keys2 = Object.keys(object2);

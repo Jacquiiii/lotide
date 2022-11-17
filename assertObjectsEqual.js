@@ -1,7 +1,7 @@
 // Helper functions
 const eqArrays = (arr1, arr2) => {
-  for (let index in arr1) {
-    if (arr1[index] !== arr2[index] || arr1.length !== arr2.length) {
+  for (let i in arr1) {
+    if (arr1[i] !== arr2[i] || arr1.length !== arr2.length) {
       return false;
     }
   }
@@ -30,16 +30,17 @@ const eqObjects = (object1, object2) => {
 };
 
 
-// Similar function to the above but it outputs a full sentence
+// Project function: Similar function to the above but it outputs a full sentence
 const assertObjectsEqual = (object1, object2) => {
   const inspect = require('util').inspect;
-  eqObjects(object1, object2) ? console.log(`✅✅✅✅ Assertion Passed: ${inspect(object1)} === ${inspect(object2)}`) : console.log(`🛑🛑🛑🛑 Assertion Failed: ${inspect(object1)} !== ${inspect(object2)}`);
-};
 
+  eqObjects(object1, object2) ? console.log(`✅✅✅✅ Assertion Passed: ${inspect(object1)} === ${inspect(object2)}`) : console.log(`🛑🛑🛑🛑 Assertion Failed: ${inspect(object1)} !== ${inspect(object2)}`);
+
+};
 
 
 // Test code
 const ab = { a: "1", b: "2" };
 const ba = { b: "2", a: "1" };
-assertObjectsEqual(ab,ba)
+assertObjectsEqual(ab,ba);
 

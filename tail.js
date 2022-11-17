@@ -1,12 +1,11 @@
-// Function that compares two values and returns a passed or failure message if the values are equal or not
+// Helper function
 const assertEqual = (actual, expected) => {
   actual === expected ? console.log(`✅✅✅✅ Assertion Passed: ${actual} === ${expected}`) : console.log(`🛑🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
 };
 
 
-// Function that returns all items in an array except the first one
+// Project function: Function that returns all items in an array except the first one
 const tail = (arr) => {
-
   let endElement = arr.length;
 
   if (arr.length >= 1) {
@@ -15,7 +14,6 @@ const tail = (arr) => {
   } else {
     return undefined;
   }
-
 };
 
 

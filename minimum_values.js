@@ -1,10 +1,10 @@
-// Function that compares two values and returns a passed or failure message if the values are equal or not
+// Helper function
 const assertEqual = (actual, expected) => {
   actual === expected ? console.log(`✅✅✅✅ Assertion Passed: ${actual} === ${expected}`) : console.log(`🛑🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
 };
 
 
-// function to calculate the smallest number in an array and return undefined if not an array or empty array
+// Project function: function to calculate the smallest number in an array and return undefined if not an array or empty array
 const min = numbers => {
   let smallest = numbers[0];
 
@@ -15,12 +15,11 @@ const min = numbers => {
       return undefined;
     }
   }
-
   return smallest;
 };
 
 
-// Test code for min function
+// Test code
 const flightPrices = [1260, 490, 599, 1400, 820];
 console.log(`The cheapest flight amongst $1260, $490, $599, $1400 and $820 costs ${min(flightPrices)}`);
 
@@ -39,8 +38,5 @@ console.log(min(groceryPrices));
 const coffeePrices = 5;
 console.log(min(coffeePrices));
 
-
-// Test code for assert equal
-// Test code for assert equal
 assertEqual(min([-1, 3, 0, -4, 1, 4, -2]), -4);
 assertEqual(min([232]), 232);
