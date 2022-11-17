@@ -1,12 +1,12 @@
 // Function that compares two values and returns a passed or failure message if the values are equal or not
 const eqArrays = (arr1, arr2) => {
-  for (let i in arr1) {
-    if (arr1[i] !== arr2[i] || arr1.length !== arr2.length){
+  for (let index in arr1) 
+    if (arr1[index] !== arr2[index] || arr1.length !== arr2.length) {
       return false;
     }
-  }
   return true;
 };
+
 
 
 // Similar function to the above but it outputs a full sentence
