@@ -1,8 +1,9 @@
 // Helper function
 const assertEqual = (actual, expected) => {
-  actual === expected ? console.log(`✅✅✅✅ Assertion Passed: ${actual} === ${expected}`) : console.log(`🛑🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
+  actual === expected
+    ? console.log(`✅✅✅✅ Assertion Passed: ${actual} === ${expected}`)
+    : console.log(`🛑🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
 };
-
 
 // Project function: Function that returns all items in an array except the first one
 const tail = (arr) => {

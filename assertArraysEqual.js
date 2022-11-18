@@ -14,9 +14,9 @@ const eqArrays = (arr1, arr2) => {
 
 // Project function: Similar function to the above but it outputs a full sentence
 const assertArraysEqual = (arr1, arr2) => {
-  eqArrays(arr1,arr2) 
-  ? console.log(`✅✅✅✅ Assertion Passed: ${arr1} === ${arr2}`) 
-  : console.log(`🛑🛑🛑🛑 Assertion Failed: ${arr1} !== ${arr2}`);
+  eqArrays(arr1,arr2)
+    ? console.log(`✅✅✅✅ Assertion Passed: ${arr1} === ${arr2}`)
+    : console.log(`🛑🛑🛑🛑 Assertion Failed: ${arr1} !== ${arr2}`);
 };
 
 
