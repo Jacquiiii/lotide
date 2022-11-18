@@ -22,19 +22,16 @@ const assertArraysEqual = (arr1, arr2) => {
 const without = (source, itemsToRemove) => {
   let newArr = [];
 
-  for (let i = 0; i < source.length; i++) {
+  for (let x = 0; x < source.length; x++) {
     let remove = false;
-    
-    for (let j = 0; j < itemsToRemove.length; j++) {
-      if (source[i] === itemsToRemove[j]) {
+    for (let y = 0; y < itemsToRemove.length; y++) {
+      if (source[x] === itemsToRemove[y]) {
         remove = true;
       }
     }
-    
-    if (remove !== true) {
-      newArr.push(source[i]);
+    if (remove === false) {
+      newArr.push(source[x]);
     }
-
   }
   console.log(newArr);
 };
@@ -43,9 +40,9 @@ const without = (source, itemsToRemove) => {
 
 // Test code for without function
 without([1, 2, 3], [1]); // => [2, 3]
+without(["1", 2, 3], [2]); // => ["1", 3]
 without(["1", "2", "3"], [1, 2, "3"]); // => ["1", "2"]
 without(["dog", "cat", "pig", "cow"], ["dog", "cow"]); // => ["cat", "pig"]
-without(["1", 2, 3], [2]); // => ["1", 3]
 
 
 // Test code to ensure original array was not modified
