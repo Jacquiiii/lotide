@@ -20,7 +20,7 @@ const assertArraysEqual = (arr1, arr2) => {
 
 // Project function: function that will return a subset of a given array, removing unwanted elements
 const without = (source, itemsToRemove) => {
-  let newArr = [];
+  let result = [];
 
   for (let x = 0; x < source.length; x++) {
     let remove = false;
@@ -29,20 +29,20 @@ const without = (source, itemsToRemove) => {
         remove = true;
       }
     }
-    if (remove === false) {
-      newArr.push(source[x]);
+    if (!remove) {
+      result.push(source[x]);
     }
   }
-  console.log(newArr);
+  return result;
 };
 
 
 
-// Test code for without function
-without([1, 2, 3], [1]); // => [2, 3]
-without(["1", 2, 3], [2]); // => ["1", 3]
-without(["1", "2", "3"], [1, 2, "3"]); // => ["1", "2"]
-without(["dog", "cat", "pig", "cow"], ["dog", "cow"]); // => ["cat", "pig"]
+// Test code
+console.log(without([1, 2, 3, 4, 5], [1, 5])); // => [2, 3, 4]
+console.log(without(['1', 2, 3], [2])); // => ['1', 3]
+console.log(without(['1', '2', '3'], [1, 2, '3'])); // => ['1', '2']
+console.log(without(['dog', 'moose', 'cow', 'pig'], ['moose', 'pig'])); // => ['dog', 'cow']
 
 
 // Test code to ensure original array was not modified
