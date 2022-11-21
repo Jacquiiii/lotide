@@ -1,12 +1,4 @@
-// Helper functions
-const assertEqual = (actual, expected) => {
-  actual === expected
-    ? console.log(`✅✅✅✅ Assertion Passed: ${actual} === ${expected}`)
-    : console.log(`🛑🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-};
-
-
-// Project function: Function to take a sentence (as a string) and then return a count of each of the letters in that sentence
+// Function to take a sentence (as a string) and then return a count of each of the letters in that sentence
 let countLetters = input => {
 
   input = input.toLowerCase();
@@ -24,7 +16,4 @@ let countLetters = input => {
 };
 
 
-// Test code
-assertEqual(countLetters("helLo").e, 1);
-assertEqual(countLetters("Victoria").i, 2);
-assertEqual(countLetters('LHL').l, 2);
+module.exports = countLetters;
