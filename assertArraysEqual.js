@@ -1,26 +1,10 @@
-// Helper function
-const eqArrays = (arr1, arr2) => {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  for (let i in arr1) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
+const eqArrays = require('./eqArrays');
 
-
-// Project function: Similar function to the above but it outputs a full sentence
+// Function that outputs an assertion if the arrays are equal or not
 const assertArraysEqual = (arr1, arr2) => {
   eqArrays(arr1,arr2)
     ? console.log(`✅✅✅✅ Assertion Passed: ${arr1} === ${arr2}`)
     : console.log(`🛑🛑🛑🛑 Assertion Failed: ${arr1} !== ${arr2}`);
 };
 
-
-// Test code
-const ab = ['a', 'b'];
-const ba = ['a', 'b'];
-assertArraysEqual(ab,ba);
+module.exports = assertArraysEqual;
