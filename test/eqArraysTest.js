@@ -20,4 +20,8 @@ describe("#eqArrays", () => {
     assert.deepEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false);
   });
 
+  it("returns true if arrays are equal", () => {
+    assert.notDeepEqual(eqArrays(["1", "2", "3"], ["1", "2"]), true);
+  });
+
 });

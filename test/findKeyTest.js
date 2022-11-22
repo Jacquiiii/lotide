@@ -21,4 +21,12 @@ describe("#findKey", () => {
     assert.strictEqual(findKey(data, x => x.stars === 5), undefined);
   });
 
+  it("returns false as 'Akelarre' does not have 1 star", () => {
+    assert.notStrictEqual(findKey(data, x => x.stars === 1), "Akelarre");
+  });
+
+  it("returns 'Akaleri' as the first key with 2 stars is 'Akaleri'", () => {
+    assert.strictEqual(findKey(data, x => x.stars === 3), "Akaleri");
+  });
+
 });

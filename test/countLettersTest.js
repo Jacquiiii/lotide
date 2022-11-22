@@ -4,16 +4,20 @@ const countLetters = require('../countLetters');
 
 describe("#countLetters", () => {
 
-  it("confirm string 'helLo' has 1 'e'", () => {
-    assert.equal(countLetters('helLo').e, 1);
+  it("confirms string 'helLo' has 1 'e'", () => {
+    assert.strictEqual(countLetters('helLo').e, 1);
   });
 
-  it("confirm string 'Victoria' has 2 'i'", () => {
-    assert.equal(countLetters("Victoria").i, 2);
+  it("confirms string 'Victoria' has 2 'i'", () => {
+    assert.strictEqual(countLetters("Victoria").i, 2);
   });
 
-  it("confirm string 'LHL' has 2 'l'", () => {
-    assert.equal(countLetters('LHL').l, 2);
+  it("confirms string 'LHL' has 2 'l'", () => {
+    assert.strictEqual(countLetters('LHL').l, 2);
+  });
+
+  it("confirms string 'Victoria' does not have 6 'i'", () => {
+    assert.notStrictEqual(countLetters("Victoria").i, 6);
   });
 
 });
