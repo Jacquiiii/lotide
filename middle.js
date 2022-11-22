@@ -1,8 +1,3 @@
-const eqArrays = require('./eqArrays');
-
-const assertArraysEqual = require('./assertArraysEqual');
-
-
 //Function that returns the middle value of an array
 const middle = array => {
   
