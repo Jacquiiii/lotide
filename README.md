@@ -28,8 +28,8 @@ The following functions are currently implemented:
 
 * `head`: Returns the first item in an array
 * `tail`: Returns all items in an array with the first item removed
-* `middle`: Returns the middle item(s) in an array
-* `countLetters`: Returns a count of each letter in a string
+* `middle`: Returns the middle item in an array if the length of the array is odd. Returns the two middle items in an array if the length of the array is even.
+* `countLetters`: Takes in a string and returns an object with the count of each letter in the string
 * `countOnly`: Takes in a collection of items and return counts for a specific subset of those items
 * `eqArrays`: Compares two arrays, returning true if they are matching and false if not
 * `eqObjects`: Compares two objects, returning true if they are matching and false if not
